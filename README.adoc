@@ -1,0 +1,25 @@
+= Example with Java records and Spring Boot =
+
+== Introduction
+
+With Java 16 a new feature to generate new classes has appeared (an introductions was made with Java 14). This
+new feature attempts to reduce the boilerplate to generate new classes and the only thing that you have to do
+is define fields.
+
+Theses new classes are going to be immutables and are good to generate dto's or classes for configuration.
+
+For example, you are going to define a new class with a record in the next way:
+
+        public record BrandDto(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        }
+
+If you want more information you can take a look into: https://refactorizando.com/ejemplo-spring-boot-records-java-16
+
+== How does it run?
+
+This is a simple Spring Boot application so to run it you can run the next command from maven:
+
+    mvn spring-boot:run
+
+
+
